@@ -5469,7 +5469,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"ui PhoBoHub",}}
+        local af = {Names = {"uiPhoBoHub",}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj

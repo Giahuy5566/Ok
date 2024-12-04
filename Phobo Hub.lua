@@ -536,7 +536,7 @@ local aa = {
                 k(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 14,
                     TextWrapped = true,
@@ -668,7 +668,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187377325",
+                        "rbxassetid://12187365769",
                         Enum.FontWeight.SemiBold,
                         Enum.FontStyle.Normal
                     ),
@@ -762,7 +762,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187377325",
+                        "rbxassetid://12187365769",
                         Enum.FontWeight.Medium,
                         Enum.FontStyle.Normal
                     ),
@@ -780,7 +780,7 @@ local aa = {
                 k(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     Text = n,
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 12,
@@ -1013,7 +1013,7 @@ local aa = {
                     RichText = true,
                     TextColor3 = Color3.fromRGB(255, 255, 255),
                     TextTransparency = 0,
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     TextSize = 13,
                     TextXAlignment = "Left",
                     TextYAlignment = "Center",
@@ -1027,7 +1027,7 @@ local aa = {
                 n(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     Text = q.Content,
                     TextColor3 = Color3.fromRGB(240, 240, 240),
                     TextSize = 14,
@@ -1044,7 +1044,7 @@ local aa = {
                 n(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     Text = q.SubContent,
                     TextColor3 = Color3.fromRGB(240, 240, 240),
                     TextSize = 14,
@@ -1080,7 +1080,17 @@ local aa = {
                     r.SubContentLabel
                 }
             )
-
+            r.CloseButton =
+                n(
+                "TextButton",
+                {
+                    Text = "",
+                    Visible = not q.Disable,
+                    Position = UDim2.new(1, -14, 0, 13),
+                    Size = UDim2.fromOffset(20, 20),
+                    AnchorPoint = Vector2.new(1, 0),
+                    BackgroundTransparency = 1
+                },
                 {
                     n(
                         "ImageLabel",
@@ -1196,7 +1206,7 @@ local aa = {
                             Text = k,
                             TextTransparency = 0,
                             FontFace = Font.new(
-                                "rbxassetid://12187377325",
+                                "rbxassetid://12187365769",
                                 Enum.FontWeight.SemiBold,
                                 Enum.FontStyle.Normal
                             ),
@@ -1271,7 +1281,7 @@ local aa = {
                             TextColor3 = Color3.fromRGB(255, 255, 255),
                             TextTransparency = 0,
                             FontFace = Font.new(
-                                "rbxassetid://12187377325",
+                                "rbxassetid://12187365769",
                                 Enum.FontWeight.Regular,
                                 Enum.FontStyle.Normal
                             ),
@@ -1419,7 +1429,7 @@ local aa = {
                 l(
                 "TextBox",
                 {
-                    FontFace = Font.new "rbxassetid://12187377325",
+                    FontFace = Font.new "rbxassetid://12187365769",
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 14,
                     TextXAlignment = Enum.TextXAlignment.Left,
@@ -1726,7 +1736,7 @@ local aa = {
                                     RichText = true,
                                     Text = n.Title,
                                     FontFace = Font.new(
-                                        "rbxassetid://12187377325",
+                                        "rbxassetid://12187365769",
                                         Enum.FontWeight.Regular,
                                         Enum.FontStyle.Normal
                                     ),
@@ -1746,7 +1756,7 @@ local aa = {
                                     Text = n.SubTitle,
                                     TextTransparency = 0.4,
                                     FontFace = Font.new(
-                                        "rbxassetid://12187377325",
+                                        "rbxassetid://12187365769",
                                         Enum.FontWeight.Regular,
                                         Enum.FontStyle.Normal
                                     ),
@@ -1889,7 +1899,7 @@ local aa = {
                     RichText = true,
                     Text = "Tab",
                     TextTransparency = 0,
-                    FontFace = Font.new("rbxassetid://12187377325", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                    FontFace = Font.new("rbxassetid://12187365769", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
                     TextSize = 28,
                     TextXAlignment = "Left",
                     TextYAlignment = "Center",
@@ -2142,7 +2152,7 @@ local aa = {
                     s(
                     "TextLabel",
                     {
-                        FontFace = Font.new "rbxassetid://12187377325",
+                        FontFace = Font.new "rbxassetid://12187365769",
                         Text = O.Content,
                         TextColor3 = Color3.fromRGB(240, 240, 240),
                         TextSize = 14,
@@ -2463,7 +2473,7 @@ local aa = {
                                 "TextLabel",
                                 {
                                     FontFace = Font.new(
-                                        "rbxassetid://12187377325",
+                                        "rbxassetid://12187365769",
                                         Enum.FontWeight.Medium,
                                         Enum.FontStyle.Normal
                                     ),
@@ -2918,7 +2928,7 @@ local aa = {
                     "TextLabel",
                     {
                         FontFace = Font.new(
-                            "rbxassetid://12187377325",
+                            "rbxassetid://12187365769",
                             Enum.FontWeight.Regular,
                             Enum.FontStyle.Normal
                         ),
@@ -3174,7 +3184,7 @@ local aa = {
                         e(
                             "TextLabel",
                             {
-                                FontFace = Font.new "rbxassetid://12187377325",
+                                FontFace = Font.new "rbxassetid://12187365769",
                                 Text = I,
                                 TextColor3 = Color3.fromRGB(200, 200, 200),
                                 TextSize = 15,
@@ -3488,7 +3498,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187377325",
+                        "rbxassetid://12187365769",
                         Enum.FontWeight.Regular,
                         Enum.FontStyle.Normal
                     ),
@@ -3737,7 +3747,7 @@ local aa = {
                 ai(
                     "TextLabel",
                     {
-                        FontFace = Font.new "rbxassetid://12187377325",
+                        FontFace = Font.new "rbxassetid://12187365769",
                         Text = "Value",
                         TextSize = 12,
                         TextWrapped = true,

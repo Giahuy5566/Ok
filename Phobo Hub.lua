@@ -3000,32 +3000,7 @@ local aa = {
                 },
                 {s}
             )
-            local u =
-                e(
-                "Frame",
-                {Size = UDim2.fromScale(1, 0.6), ThemeTag = {BackgroundColor3 = "DropdownHolder"}},
-                {
-                    t,
-                    e("UICorner", {CornerRadius = UDim.new(0, 7)}),
-                    e(
-                        "UIStroke",
-                        {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, ThemeTag = {Color = "DropdownBorder"}}
-                    ),
-                    e(
-                        "ImageLabel",
-                        {
-                            BackgroundTransparency = 1,
-                            Image = "http://www.roblox.com/asset/?id=5554236805",
-                            ScaleType = Enum.ScaleType.Slice,
-                            SliceCenter = Rect.new(23, 23, 277, 277),
-                            Size = UDim2.fromScale(1, 1) + UDim2.fromOffset(30, 30),
-                            Position = UDim2.fromOffset(-15, -15),
-                            ImageColor3 = Color3.fromRGB(0, 0, 0),
-                            ImageTransparency = 0.1
-                        }
-                    )
-                }
-            )
+
             local v =
                 e(
                 "Frame",

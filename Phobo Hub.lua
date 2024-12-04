@@ -1080,17 +1080,7 @@ local aa = {
                     r.SubContentLabel
                 }
             )
-            r.CloseButton =
-                n(
-                "TextButton",
-                {
-                    Text = "",
-                    Visible = not q.Disable,
-                    Position = UDim2.new(1, -14, 0, 13),
-                    Size = UDim2.fromOffset(20, 20),
-                    AnchorPoint = Vector2.new(1, 0),
-                    BackgroundTransparency = 1
-                },
+
                 {
                     n(
                         "ImageLabel",

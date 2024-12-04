@@ -1086,7 +1086,7 @@ local aa = {
                 {
                     Text = "",
                     Visible = not q.Disable,
-                    Position = UDim2.new(1, 14, 0, 13),
+                    Position = UDim2.new(1, -14, 0, 13),
                     Size = UDim2.fromOffset(20, 20),
                     AnchorPoint = Vector2.new(1, 0),
                     BackgroundTransparency = 1
@@ -1782,21 +1782,7 @@ local aa = {
                     )
                 }
             )
-            o.CloseButton =
-                q(
-                i.Close,
-                UDim2.new(1, -4, 0, 4),
-                o.Frame,
-                function()
-                    p.Window:Dialog {
-                        Title = "Close",
-                        Content = "Are you sure you want to unload the interface?",
-                        Buttons = {{Title = "Yes", Callback = function()
-                                    p:Destroy()
-                                end}, {Title = "No"}}
-                    }
-                end
-            )
+
             o.MaxButton =
                 q(
                 i.Max,

@@ -5700,7 +5700,6 @@ local aa = {
         local aa, ab, ac, ad, ae = b(54)
         return {
             Name = "Pink",
-            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(72, 138, 182),
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),

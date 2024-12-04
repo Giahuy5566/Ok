@@ -750,7 +750,219 @@ local aa = {
         end
         return q
     end,
-
+    [11] = function()
+        local c, d, e, f, g = b(11)
+        local h = d.Parent.Parent
+        local i, j = e(h.Packages.Flipper), e(h.Creator)
+        local k, l = j.New, i.Spring.new
+        return function(m, n, o, p)
+            local q, ts = {IsLocked = false}, game:GetService "TweenService"
+            q.TitleLabel =
+                k(
+                "TextLabel",
+                {
+                    FontFace = Font.new(
+                        "rbxassetid://12187365769",
+                        Enum.FontWeight.Medium,
+                        Enum.FontStyle.Normal
+                    ),
+                    Text = m,
+                    TextColor3 = Color3.fromRGB(240, 240, 240),
+                    TextSize = 13,
+                    TextXAlignment = Enum.TextXAlignment.Left,
+                    Size = UDim2.new(1, 0, 0, 14),
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    BackgroundTransparency = 1,
+                    ThemeTag = {TextColor3 = "Text"}
+                }
+            )
+            q.DescLabel =
+                k(
+                "TextLabel",
+                {
+                    FontFace = Font.new "rbxassetid://12187365769",
+                    Text = n,
+                    TextColor3 = Color3.fromRGB(200, 200, 200),
+                    TextSize = 12,
+                    TextWrapped = true,
+                    TextXAlignment = Enum.TextXAlignment.Left,
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    AutomaticSize = Enum.AutomaticSize.Y,
+                    BackgroundTransparency = 1,
+                    Size = UDim2.new(1, 0, 0, 14),
+                    ThemeTag = {TextColor3 = "SubText"}
+                }
+            )
+            q.LabelHolder =
+                k(
+                "Frame",
+                {
+                    AutomaticSize = Enum.AutomaticSize.Y,
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    BackgroundTransparency = 1,
+                    Position = UDim2.fromOffset(10, 0),
+                    Size = UDim2.new(1, -28, 0, 0)
+                },
+                {
+                    k(
+                        "UIListLayout",
+                        {SortOrder = Enum.SortOrder.LayoutOrder, VerticalAlignment = Enum.VerticalAlignment.Center}
+                    ),
+                    k("UIPadding", {PaddingBottom = UDim.new(0, 13), PaddingTop = UDim.new(0, 13)}),
+                    q.TitleLabel,
+                    q.DescLabel
+                }
+            )
+            q.Border =
+                k(
+                "UIStroke",
+                {
+                    Transparency = 0.5,
+                    ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                    Color = Color3.fromRGB(0, 0, 0),
+                    ThemeTag = {Color = "ElementBorder"}
+                }
+            )
+            q.Frame =
+                k(
+                "TextButton",
+                {
+                    Size = UDim2.new(1, 0, 0, 0),
+                    BackgroundTransparency = 0.89,
+                    BackgroundColor3 = Color3.fromRGB(130, 130, 130),
+                    Parent = o,
+                    AutomaticSize = Enum.AutomaticSize.Y,
+                    Text = "",
+                    LayoutOrder = 7,
+                    ThemeTag = {BackgroundColor3 = "Element", BackgroundTransparency = "ElementTransparency"}
+                },
+                {k("UICorner", {CornerRadius = UDim.new(0, 4)}), q.Border, q.LabelHolder}
+            )
+            q.LockButton =
+            k(
+                "TextButton",
+                {
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+                    BackgroundTransparency = 1,
+                    ZIndex = 250,
+                    Size = UDim2.fromScale(1, 1),
+                    Parent = q.Frame,
+                    Visible = false
+                }
+            )
+            q.Locked =
+            k(
+                "Frame",
+                {
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+                    BackgroundTransparency = 1,
+                    ZIndex = 135,
+                    Size = UDim2.fromScale(1, 1),
+                    Parent = q.Frame,
+                    Visible = true
+                },
+                {
+                    k("UICorner",{CornerRadius = UDim.new(0, 4)}),
+                    k(
+                        "ImageLabel",
+                        {
+                            BackgroundTransparency = 1,
+                            Size = UDim2.fromOffset(0, 0),
+                            Position = UDim2.new(0.5, 0, 0.5, 0),
+                            AnchorPoint = Vector2.new(0.5, 0.5),
+                            Image = "http://www.roblox.com/asset/?id=18855086552",
+                            ImageColor3 = Color3.fromRGB(0, 0, 0)
+                        }
+                    )
+                }
+            )
+            function q.SetTitle(r, s)
+                q.TitleLabel.Text = s
+            end
+            function q.SetDesc(r, s)
+                if s == nil then
+                    s = ""
+                end
+                if s == "" then
+                    q.DescLabel.Visible = false
+                else
+                    q.DescLabel.Visible = true
+                end
+                q.DescLabel.Text = s
+                if q.IsLocked then ts:Create(q.Locked.ImageLabel, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1), {Size = UDim2.fromOffset(q.DescLabel.TextBounds.Y + 15, q.DescLabel.TextBounds.Y + 15)}):Play() end
+            end
+            function q.Lock(r)
+                q.Locked.ImageLabel.Size = UDim2.fromOffset(0, 0)
+                ts:Create(
+                    q.Locked,
+                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
+                    {BackgroundTransparency = 0.5}
+                ):Play()
+                ts:Create(
+                    q.Locked.ImageLabel,
+                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
+                    {Size = UDim2.fromOffset(q.DescLabel.TextBounds.Y + 15, q.DescLabel.TextBounds.Y + 15)}
+                ):Play()
+                q.IsLocked = true
+                q.LockButton.Visible = true
+            end
+            function q.UnLock(r)
+                ts:Create(
+                    q.Locked,
+                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
+                    {BackgroundTransparency = 1}
+                ):Play()
+                ts:Create(
+                    q.Locked.ImageLabel,
+                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
+                    {Size = UDim2.fromOffset(0, 0)}
+                ):Play()
+                q.IsLocked = false
+                q.LockButton.Visible = false
+            end
+            function q.Destroy(r)
+                q.Frame:Destroy()
+            end
+            q:SetTitle(m)
+            q:SetDesc(n)
+            if p then
+                local r, s, t =
+                    h.Themes,
+                    j.SpringMotor(
+                        j.GetThemeProperty "ElementTransparency",
+                        q.Frame,
+                        "BackgroundTransparency",
+                        false,
+                        true
+                    )
+                j.AddSignal(
+                    q.Frame.MouseEnter,
+                    function()
+                        t(j.GetThemeProperty "ElementTransparency" - j.GetThemeProperty "HoverChange")
+                    end
+                )
+                j.AddSignal(
+                    q.Frame.MouseLeave,
+                    function()
+                        t(j.GetThemeProperty "ElementTransparency")
+                    end
+                )
+                j.AddSignal(
+                    q.Frame.MouseButton1Down,
+                    function()
+                        t(j.GetThemeProperty "ElementTransparency" + j.GetThemeProperty "HoverChange")
+                    end
+                )
+                j.AddSignal(
+                    q.Frame.MouseButton1Up,
+                    function()
+                        t(j.GetThemeProperty "ElementTransparency" - j.GetThemeProperty "HoverChange")
+                    end
+                )
+            end
+            return q
+        end
+    end,
     [12] = function()
         local c, d, e, f, g = b(12)
         local h = d.Parent.Parent

@@ -5455,7 +5455,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose"}}
+        local af = {Names = {"misery", "Darker", "Light", "Aqua", "Amethyst", "Rose"}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
@@ -5466,7 +5466,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(48)
         return {
             Name = "Amethyst",
-            Image = "rbxassetid://18343258150",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(97, 62, 167),
             AcrylicMain = Color3.fromRGB(20, 20, 20),
             AcrylicBorder = Color3.fromRGB(110, 90, 130),
@@ -5507,7 +5507,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(49)
         return {
             Name = "Aqua",
-            Image = "rbxassetid://18343250276",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(60, 165, 165),
             AcrylicMain = Color3.fromRGB(20, 20, 20),
             AcrylicBorder = Color3.fromRGB(50, 100, 100),
@@ -5547,7 +5547,7 @@ local aa = {
     [50] = function()
         local aa, ab, ac, ad, ae = b(50)
         return {
-            Name = "Dark",
+            Name = "misery",
             Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(255, 0, 0),
             AcrylicMain = Color3.fromRGB(9, 8, 8),
@@ -5589,7 +5589,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(51)
         return {
             Name = "Darker",
-            Image = "rbxassetid://18343252912",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(72, 138, 182),
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),
@@ -5618,7 +5618,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(52)
         return {
             Name = "Light",
-            Image = "rbxassetid://18343183125",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(0, 103, 192),
             AcrylicMain = Color3.fromRGB(200, 200, 200),
             AcrylicBorder = Color3.fromRGB(120, 120, 120),
@@ -5659,7 +5659,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(53)
         return {
             Name = "Rose",
-            Image = "rbxassetid://18343260369",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(180, 55, 90),
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(130, 90, 110),
@@ -5700,6 +5700,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(54)
         return {
             Name = "Pink",
+            Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(72, 138, 182),
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),

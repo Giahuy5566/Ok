@@ -1605,15 +1605,114 @@ local aa = {
                     end
                     return s
                 end,
+                function(q, p, r)
+                    local s = {Callback = r or function()
+                    end, Dragging = nil, DragA = nil, DragB = nil, DragC = nil}
+                    if n.IconVisual == "" or n.IconVisual == nil then
+                        s.Frame =
+                        l(
+                        "ImageButton",
+                        {
+                            Size = UDim2.new(0.065, 0, 0.120, 0),
+                            AnchorPoint = Vector2.new(0.5, 0.5),
+                            ZIndex = 125,
+                            BackgroundTransparency = 1,
+                            Parent = q,
+                            Position = p or UDim2.new(0.033, 0, 0.938, 0),
+                            ThemeTag = {Image = "Image"}
+                        },
+                        {
+                            l("UICorner", {CornerRadius = UDim.new(1, 1)}),
+                        }
+                        )
 
+                        m(s.Frame.MouseButton1Click, s.Callback)
+                        s.SetCallback = function(v)
+                            s.Callback = v
+                        end
+                    else
+                        s.Frame =
+                        l(
+                        "ImageButton",
+                        {
+                            Size = UDim2.new(0.065, 0, 0.120, 0),
+                            AnchorPoint = Vector2.new(0.5, 0.5),
+                            ZIndex = 125,
+                            BackgroundTransparency = 1,
+                            Parent = q,
+                            Position = p or UDim2.new(0.033, 0, 0.938, 0),
+                            Image = n.IconVisual
+                        },
+                        {
+                            l("UICorner", {CornerRadius = UDim.new(1, 1)}),
+                        }
+                        )
 
-
-
-
-
-
-
-
+                        m(s.Frame.MouseButton1Click, s.Callback)
+                        s.SetCallback = function(v)
+                            s.Callback = v
+                        end
+                    end
+                    m(
+                        s.Frame.InputBegan,
+                        function(M)
+                            if M.UserInputType == Enum.UserInputType.MouseButton1 or M.UserInputType == Enum.UserInputType.Touch then
+                                s.Dragging = true
+                                s.DragA = M.Position
+                                s.DragB = s.Frame.Position
+                                M.Changed:Connect(
+                                    function()
+                                        if M.UserInputState == Enum.UserInputState.End then
+                                            s.Dragging = false
+                                        end
+                                    end
+                                )
+                            end
+                        end
+                    )
+                    m(
+                        s.Frame.InputChanged,
+                        function(M)
+                            if M.UserInputType == Enum.UserInputType.MouseMovement or M.UserInputType == Enum.UserInputType.Touch then
+                                s.DragC = M
+                            end
+                        end
+                    )
+                    m(
+                        game:GetService("UserInputService").InputChanged,
+                        function(M)
+                            if M == s.DragC and s.Dragging then
+                                local w = M.Position - s.DragA
+                                local c = UDim2.new(s.DragB.X.Scale, s.DragB.X.Offset + w.X, s.DragB.Y.Scale, s.DragB.Y.Offset + w.Y)
+                                game:GetService("TweenService"):Create(s.Frame, TweenInfo.new(0.125), {Position = c}):Play()
+                            end
+                        end
+                    )
+                    task.spawn(
+                        function()
+                            repeat task.wait() until xo.Window and xo.Window.Root
+                            m(
+                                xo.Window.Root:GetPropertyChangedSignal "Visible",
+                                function()
+                                    if xo.Window.Root.Visible then
+                                        s.Frame.ImageTransparency = 0
+                                    else
+                                        s.Frame.ImageTransparency = 0.5
+                                    end
+                                end
+                            )
+                            pcall(
+                                function()
+                                    repeat task.wait() until not xo.Window.Root.Visible
+                                    if s.Frame then
+                                        s.Frame.ImageTransparency = 0.5
+                                    end
+                                end
+                            )
+                        end
+                    )
+                    return s
+                end
             o.Frame =
                 l(
                 "Frame",

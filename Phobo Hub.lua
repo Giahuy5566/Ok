@@ -536,7 +536,7 @@ local aa = {
                 k(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 14,
                     TextWrapped = true,
@@ -668,7 +668,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187372175",
+                        "rbxassetid://12187371840",
                         Enum.FontWeight.SemiBold,
                         Enum.FontStyle.Normal
                     ),
@@ -762,7 +762,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187372175",
+                        "rbxassetid://12187371840",
                         Enum.FontWeight.Medium,
                         Enum.FontStyle.Normal
                     ),
@@ -780,7 +780,7 @@ local aa = {
                 k(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     Text = n,
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 12,
@@ -1013,7 +1013,7 @@ local aa = {
                     RichText = true,
                     TextColor3 = Color3.fromRGB(255, 255, 255),
                     TextTransparency = 0,
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     TextSize = 13,
                     TextXAlignment = "Left",
                     TextYAlignment = "Center",
@@ -1027,7 +1027,7 @@ local aa = {
                 n(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     Text = q.Content,
                     TextColor3 = Color3.fromRGB(240, 240, 240),
                     TextSize = 14,
@@ -1044,7 +1044,7 @@ local aa = {
                 n(
                 "TextLabel",
                 {
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     Text = q.SubContent,
                     TextColor3 = Color3.fromRGB(240, 240, 240),
                     TextSize = 14,
@@ -1206,7 +1206,7 @@ local aa = {
                             Text = k,
                             TextTransparency = 0,
                             FontFace = Font.new(
-                                "rbxassetid://12187360881",
+                                "rbxassetid://12187371840",
                                 Enum.FontWeight.SemiBold,
                                 Enum.FontStyle.Normal
                             ),
@@ -1281,7 +1281,7 @@ local aa = {
                             TextColor3 = Color3.fromRGB(255, 255, 255),
                             TextTransparency = 0,
                             FontFace = Font.new(
-                                "rbxassetid://12187372175",
+                                "rbxassetid://12187371840",
                                 Enum.FontWeight.Regular,
                                 Enum.FontStyle.Normal
                             ),
@@ -1429,7 +1429,7 @@ local aa = {
                 l(
                 "TextBox",
                 {
-                    FontFace = Font.new "rbxassetid://12187372175",
+                    FontFace = Font.new "rbxassetid://12187371840",
                     TextColor3 = Color3.fromRGB(200, 200, 200),
                     TextSize = 14,
                     TextXAlignment = Enum.TextXAlignment.Left,
@@ -1605,114 +1605,15 @@ local aa = {
                     end
                     return s
                 end,
-                function(q, p, r)
-                    local s = {Callback = r or function()
-                    end, Dragging = nil, DragA = nil, DragB = nil, DragC = nil}
-                    if n.IconVisual == "" or n.IconVisual == nil then
-                        s.Frame =
-                        l(
-                        "ImageButton",
-                        {
-                            Size = UDim2.new(0.065, 0, 0.120, 0),
-                            AnchorPoint = Vector2.new(0.5, 0.5),
-                            ZIndex = 125,
-                            BackgroundTransparency = 1,
-                            Parent = q,
-                            Position = p or UDim2.new(0.033, 0, 0.938, 0),
-                            ThemeTag = {Image = "Image"}
-                        },
-                        {
-                            l("UICorner", {CornerRadius = UDim.new(1, 1)}),
-                        }
-                        )
 
-                        m(s.Frame.MouseButton1Click, s.Callback)
-                        s.SetCallback = function(v)
-                            s.Callback = v
-                        end
-                    else
-                        s.Frame =
-                        l(
-                        "ImageButton",
-                        {
-                            Size = UDim2.new(0.065, 0, 0.120, 0),
-                            AnchorPoint = Vector2.new(0.5, 0.5),
-                            ZIndex = 125,
-                            BackgroundTransparency = 1,
-                            Parent = q,
-                            Position = p or UDim2.new(0.033, 0, 0.938, 0),
-                            Image = n.IconVisual
-                        },
-                        {
-                            l("UICorner", {CornerRadius = UDim.new(1, 1)}),
-                        }
-                        )
 
-                        m(s.Frame.MouseButton1Click, s.Callback)
-                        s.SetCallback = function(v)
-                            s.Callback = v
-                        end
-                    end
-                    m(
-                        s.Frame.InputBegan,
-                        function(M)
-                            if M.UserInputType == Enum.UserInputType.MouseButton1 or M.UserInputType == Enum.UserInputType.Touch then
-                                s.Dragging = true
-                                s.DragA = M.Position
-                                s.DragB = s.Frame.Position
-                                M.Changed:Connect(
-                                    function()
-                                        if M.UserInputState == Enum.UserInputState.End then
-                                            s.Dragging = false
-                                        end
-                                    end
-                                )
-                            end
-                        end
-                    )
-                    m(
-                        s.Frame.InputChanged,
-                        function(M)
-                            if M.UserInputType == Enum.UserInputType.MouseMovement or M.UserInputType == Enum.UserInputType.Touch then
-                                s.DragC = M
-                            end
-                        end
-                    )
-                    m(
-                        game:GetService("UserInputService").InputChanged,
-                        function(M)
-                            if M == s.DragC and s.Dragging then
-                                local w = M.Position - s.DragA
-                                local c = UDim2.new(s.DragB.X.Scale, s.DragB.X.Offset + w.X, s.DragB.Y.Scale, s.DragB.Y.Offset + w.Y)
-                                game:GetService("TweenService"):Create(s.Frame, TweenInfo.new(0.125), {Position = c}):Play()
-                            end
-                        end
-                    )
-                    task.spawn(
-                        function()
-                            repeat task.wait() until xo.Window and xo.Window.Root
-                            m(
-                                xo.Window.Root:GetPropertyChangedSignal "Visible",
-                                function()
-                                    if xo.Window.Root.Visible then
-                                        s.Frame.ImageTransparency = 0
-                                    else
-                                        s.Frame.ImageTransparency = 0.5
-                                    end
-                                end
-                            )
-                            pcall(
-                                function()
-                                    repeat task.wait() until not xo.Window.Root.Visible
-                                    if s.Frame then
-                                        s.Frame.ImageTransparency = 0.5
-                                    end
-                                end
-                            )
-                        end
-                    )
-                    return s
-                end
+
+
+
+
+
+
+
             o.Frame =
                 l(
                 "Frame",
@@ -1736,7 +1637,7 @@ local aa = {
                                     RichText = true,
                                     Text = n.Title,
                                     FontFace = Font.new(
-                                        "rbxassetid://12187372175",
+                                        "rbxassetid://12187371840",
                                         Enum.FontWeight.Regular,
                                         Enum.FontStyle.Normal
                                     ),
@@ -1756,7 +1657,7 @@ local aa = {
                                     Text = n.SubTitle,
                                     TextTransparency = 0.4,
                                     FontFace = Font.new(
-                                        "rbxassetid://12187372175",
+                                        "rbxassetid://12187371840",
                                         Enum.FontWeight.Regular,
                                         Enum.FontStyle.Normal
                                     ),
@@ -1913,7 +1814,7 @@ local aa = {
                     RichText = true,
                     Text = "Tab",
                     TextTransparency = 0,
-                    FontFace = Font.new("rbxassetid://12187372175", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                    FontFace = Font.new("rbxassetid://12187371840", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
                     TextSize = 28,
                     TextXAlignment = "Left",
                     TextYAlignment = "Center",
@@ -2166,7 +2067,7 @@ local aa = {
                     s(
                     "TextLabel",
                     {
-                        FontFace = Font.new "rbxassetid://12187372175",
+                        FontFace = Font.new "rbxassetid://12187371840",
                         Text = O.Content,
                         TextColor3 = Color3.fromRGB(240, 240, 240),
                         TextSize = 14,
@@ -2487,7 +2388,7 @@ local aa = {
                                 "TextLabel",
                                 {
                                     FontFace = Font.new(
-                                        "rbxassetid://12187372175",
+                                        "rbxassetid://12187371840",
                                         Enum.FontWeight.Medium,
                                         Enum.FontStyle.Normal
                                     ),
@@ -2942,7 +2843,7 @@ local aa = {
                     "TextLabel",
                     {
                         FontFace = Font.new(
-                            "rbxassetid://12187372175",
+                            "rbxassetid://12187371840",
                             Enum.FontWeight.Regular,
                             Enum.FontStyle.Normal
                         ),
@@ -3198,7 +3099,7 @@ local aa = {
                         e(
                             "TextLabel",
                             {
-                                FontFace = Font.new "rbxassetid://12187372175",
+                                FontFace = Font.new "rbxassetid://12187371840",
                                 Text = I,
                                 TextColor3 = Color3.fromRGB(200, 200, 200),
                                 TextSize = 15,
@@ -3512,7 +3413,7 @@ local aa = {
                 "TextLabel",
                 {
                     FontFace = Font.new(
-                        "rbxassetid://12187372175",
+                        "rbxassetid://12187371840",
                         Enum.FontWeight.Regular,
                         Enum.FontStyle.Normal
                     ),
@@ -3761,7 +3662,7 @@ local aa = {
                 ai(
                     "TextLabel",
                     {
-                        FontFace = Font.new "rbxassetid://12187372175",
+                        FontFace = Font.new "rbxassetid://12187371840",
                         Text = "Value",
                         TextSize = 12,
                         TextWrapped = true,
@@ -5469,100 +5370,18 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose"}}
+        local af = {Names = {"ui PhoBoHub",}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
         end
         return af
     end,
-    [48] = function()
-        local aa, ab, ac, ad, ae = b(48)
-        return {
-            Name = "Amethyst",
-            Image = "rbxassetid://18343258150",
-            Accent = Color3.fromRGB(97, 62, 167),
-            AcrylicMain = Color3.fromRGB(20, 20, 20),
-            AcrylicBorder = Color3.fromRGB(110, 90, 130),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(85, 57, 139), Color3.fromRGB(40, 25, 65)),
-            AcrylicNoise = 0.92,
-            TitleBarLine = Color3.fromRGB(95, 75, 110),
-            Tab = Color3.fromRGB(160, 140, 180),
-            Element = Color3.fromRGB(140, 120, 160),
-            ElementBorder = Color3.fromRGB(60, 50, 70),
-            InElementBorder = Color3.fromRGB(100, 90, 110),
-            ElementTransparency = 0.87,
-            ToggleSlider = Color3.fromRGB(140, 120, 160),
-            ToggleToggled = Color3.fromRGB(0, 0, 0),
-            SliderRail = Color3.fromRGB(140, 120, 160),
-            DropdownFrame = Color3.fromRGB(170, 160, 200),
-            DropdownHolder = Color3.fromRGB(60, 45, 80),
-            DropdownBorder = Color3.fromRGB(50, 40, 65),
-            DropdownOption = Color3.fromRGB(140, 120, 160),
-            Keybind = Color3.fromRGB(140, 120, 160),
-            Input = Color3.fromRGB(140, 120, 160),
-            InputFocused = Color3.fromRGB(20, 10, 30),
-            InputIndicator = Color3.fromRGB(170, 150, 190),
-            Dialog = Color3.fromRGB(60, 45, 80),
-            DialogHolder = Color3.fromRGB(45, 30, 65),
-            DialogHolderLine = Color3.fromRGB(40, 25, 60),
-            DialogButton = Color3.fromRGB(60, 45, 80),
-            DialogButtonBorder = Color3.fromRGB(95, 80, 110),
-            DialogBorder = Color3.fromRGB(85, 70, 100),
-            DialogInput = Color3.fromRGB(70, 55, 85),
-            DialogInputLine = Color3.fromRGB(175, 160, 190),
-            Text = Color3.fromRGB(240, 240, 240),
-            SubText = Color3.fromRGB(170, 170, 170),
-            Hover = Color3.fromRGB(140, 120, 160),
-            HoverChange = 0.04
-        }
-    end,
-    [49] = function()
-        local aa, ab, ac, ad, ae = b(49)
-        return {
-            Name = "Aqua",
-            Image = "rbxassetid://18343250276",
-            Accent = Color3.fromRGB(60, 165, 165),
-            AcrylicMain = Color3.fromRGB(20, 20, 20),
-            AcrylicBorder = Color3.fromRGB(50, 100, 100),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 140, 140), Color3.fromRGB(40, 80, 80)),
-            AcrylicNoise = 0.92,
-            TitleBarLine = Color3.fromRGB(60, 120, 120),
-            Tab = Color3.fromRGB(140, 180, 180),
-            Element = Color3.fromRGB(110, 160, 160),
-            ElementBorder = Color3.fromRGB(40, 70, 70),
-            InElementBorder = Color3.fromRGB(80, 110, 110),
-            ElementTransparency = 0.84,
-            ToggleSlider = Color3.fromRGB(110, 160, 160),
-            ToggleToggled = Color3.fromRGB(0, 0, 0),
-            SliderRail = Color3.fromRGB(110, 160, 160),
-            DropdownFrame = Color3.fromRGB(160, 200, 200),
-            DropdownHolder = Color3.fromRGB(40, 80, 80),
-            DropdownBorder = Color3.fromRGB(40, 65, 65),
-            DropdownOption = Color3.fromRGB(110, 160, 160),
-            Keybind = Color3.fromRGB(110, 160, 160),
-            Input = Color3.fromRGB(110, 160, 160),
-            InputFocused = Color3.fromRGB(20, 10, 30),
-            InputIndicator = Color3.fromRGB(130, 170, 170),
-            Dialog = Color3.fromRGB(40, 80, 80),
-            DialogHolder = Color3.fromRGB(30, 60, 60),
-            DialogHolderLine = Color3.fromRGB(25, 50, 50),
-            DialogButton = Color3.fromRGB(40, 80, 80),
-            DialogButtonBorder = Color3.fromRGB(80, 110, 110),
-            DialogBorder = Color3.fromRGB(50, 100, 100),
-            DialogInput = Color3.fromRGB(45, 90, 90),
-            DialogInputLine = Color3.fromRGB(130, 170, 170),
-            Text = Color3.fromRGB(240, 240, 240),
-            SubText = Color3.fromRGB(170, 170, 170),
-            Hover = Color3.fromRGB(110, 160, 160),
-            HoverChange = 0.04
-        }
-    end,
     [50] = function()
         local aa, ab, ac, ad, ae = b(50)
         return {
             Name = "Dark",
-            Image = "rbxassetid://",
+            Image = "rbxassetid://94379369417269",
             Accent = Color3.fromRGB(255, 0, 0),
             AcrylicMain = Color3.fromRGB(9, 8, 8),
             AcrylicBorder = Color3.fromRGB(9, 8, 8),
@@ -5599,159 +5418,6 @@ local aa = {
             HoverChange = 0.07
         }
     end,
-    [51] = function()
-        local aa, ab, ac, ad, ae = b(51)
-        return {
-            Name = "Darker",
-            Image = "rbxassetid://18343252912",
-            Accent = Color3.fromRGB(72, 138, 182),
-            AcrylicMain = Color3.fromRGB(30, 30, 30),
-            AcrylicBorder = Color3.fromRGB(60, 60, 60),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(25, 25, 25), Color3.fromRGB(15, 15, 15)),
-            AcrylicNoise = 0.94,
-            TitleBarLine = Color3.fromRGB(65, 65, 65),
-            Tab = Color3.fromRGB(100, 100, 100),
-            Element = Color3.fromRGB(70, 70, 70),
-            ElementBorder = Color3.fromRGB(25, 25, 25),
-            InElementBorder = Color3.fromRGB(55, 55, 55),
-            ElementTransparency = 0.82,
-            DropdownFrame = Color3.fromRGB(120, 120, 120),
-            DropdownHolder = Color3.fromRGB(35, 35, 35),
-            DropdownBorder = Color3.fromRGB(25, 25, 25),
-            Dialog = Color3.fromRGB(35, 35, 35),
-            DialogHolder = Color3.fromRGB(25, 25, 25),
-            DialogHolderLine = Color3.fromRGB(20, 20, 20),
-            DialogButton = Color3.fromRGB(35, 35, 35),
-            DialogButtonBorder = Color3.fromRGB(55, 55, 55),
-            DialogBorder = Color3.fromRGB(50, 50, 50),
-            DialogInput = Color3.fromRGB(45, 45, 45),
-            DialogInputLine = Color3.fromRGB(120, 120, 120)
-        }
-    end,
-    [52] = function()
-        local aa, ab, ac, ad, ae = b(52)
-        return {
-            Name = "Light",
-            Image = "rbxassetid://18343183125",
-            Accent = Color3.fromRGB(0, 103, 192),
-            AcrylicMain = Color3.fromRGB(200, 200, 200),
-            AcrylicBorder = Color3.fromRGB(120, 120, 120),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(255, 255, 255), Color3.fromRGB(255, 255, 255)),
-            AcrylicNoise = 0.96,
-            TitleBarLine = Color3.fromRGB(160, 160, 160),
-            Tab = Color3.fromRGB(90, 90, 90),
-            Element = Color3.fromRGB(255, 255, 255),
-            ElementBorder = Color3.fromRGB(180, 180, 180),
-            InElementBorder = Color3.fromRGB(150, 150, 150),
-            ElementTransparency = 0.65,
-            ToggleSlider = Color3.fromRGB(40, 40, 40),
-            ToggleToggled = Color3.fromRGB(255, 255, 255),
-            SliderRail = Color3.fromRGB(40, 40, 40),
-            DropdownFrame = Color3.fromRGB(200, 200, 200),
-            DropdownHolder = Color3.fromRGB(240, 240, 240),
-            DropdownBorder = Color3.fromRGB(200, 200, 200),
-            DropdownOption = Color3.fromRGB(150, 150, 150),
-            Keybind = Color3.fromRGB(120, 120, 120),
-            Input = Color3.fromRGB(200, 200, 200),
-            InputFocused = Color3.fromRGB(100, 100, 100),
-            InputIndicator = Color3.fromRGB(80, 80, 80),
-            Dialog = Color3.fromRGB(255, 255, 255),
-            DialogHolder = Color3.fromRGB(240, 240, 240),
-            DialogHolderLine = Color3.fromRGB(228, 228, 228),
-            DialogButton = Color3.fromRGB(255, 255, 255),
-            DialogButtonBorder = Color3.fromRGB(190, 190, 190),
-            DialogBorder = Color3.fromRGB(140, 140, 140),
-            DialogInput = Color3.fromRGB(250, 250, 250),
-            DialogInputLine = Color3.fromRGB(160, 160, 160),
-            Text = Color3.fromRGB(0, 0, 0),
-            SubText = Color3.fromRGB(40, 40, 40),
-            Hover = Color3.fromRGB(50, 50, 50),
-            HoverChange = 0.16
-        }
-    end,
-    [53] = function()
-        local aa, ab, ac, ad, ae = b(53)
-        return {
-            Name = "Rose",
-            Image = "rbxassetid://18343260369",
-            Accent = Color3.fromRGB(180, 55, 90),
-            AcrylicMain = Color3.fromRGB(40, 40, 40),
-            AcrylicBorder = Color3.fromRGB(130, 90, 110),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(190, 60, 135), Color3.fromRGB(165, 50, 70)),
-            AcrylicNoise = 0.92,
-            TitleBarLine = Color3.fromRGB(140, 85, 105),
-            Tab = Color3.fromRGB(180, 140, 160),
-            Element = Color3.fromRGB(200, 120, 170),
-            ElementBorder = Color3.fromRGB(110, 70, 85),
-            InElementBorder = Color3.fromRGB(120, 90, 90),
-            ElementTransparency = 0.86,
-            ToggleSlider = Color3.fromRGB(200, 120, 170),
-            ToggleToggled = Color3.fromRGB(0, 0, 0),
-            SliderRail = Color3.fromRGB(200, 120, 170),
-            DropdownFrame = Color3.fromRGB(200, 160, 180),
-            DropdownHolder = Color3.fromRGB(120, 50, 75),
-            DropdownBorder = Color3.fromRGB(90, 40, 55),
-            DropdownOption = Color3.fromRGB(200, 120, 170),
-            Keybind = Color3.fromRGB(200, 120, 170),
-            Input = Color3.fromRGB(200, 120, 170),
-            InputFocused = Color3.fromRGB(20, 10, 30),
-            InputIndicator = Color3.fromRGB(170, 150, 190),
-            Dialog = Color3.fromRGB(120, 50, 75),
-            DialogHolder = Color3.fromRGB(95, 40, 60),
-            DialogHolderLine = Color3.fromRGB(90, 35, 55),
-            DialogButton = Color3.fromRGB(120, 50, 75),
-            DialogButtonBorder = Color3.fromRGB(155, 90, 115),
-            DialogBorder = Color3.fromRGB(100, 70, 90),
-            DialogInput = Color3.fromRGB(135, 55, 80),
-            DialogInputLine = Color3.fromRGB(190, 160, 180),
-            Text = Color3.fromRGB(240, 240, 240),
-            SubText = Color3.fromRGB(170, 170, 170),
-            Hover = Color3.fromRGB(200, 120, 170),
-            HoverChange = 0.04
-        }
-    end,
-    [54] = function()
-        local aa, ab, ac, ad, ae = b(54)
-        return {
-            Name = "Pink",
-            Accent = Color3.fromRGB(255, 165, 185),
-            AcrylicMain = Color3.fromRGB(238, 130, 238),
-            AcrylicBorder = Color3.fromRGB(255, 185, 190),
-            AcrylicGradient = ColorSequence.new(Color3.fromRGB(255, 192, 203), Color3.fromRGB(255, 192, 203)),
-            AcrylicNoise = 0.92,
-            TitleBarLine = Color3.fromRGB(255, 182, 193),
-            Tab = Color3.fromRGB(30, 30, 30),
-            Element = Color3.fromRGB(0, 0, 0),
-            ElementBorder = Color3.fromRGB(0, 0, 0),
-            InElementBorder = Color3.fromRGB(0, 0, 0),
-            ElementTransparency = 0.66,
-            ToggleSlider = Color3.fromRGB(0, 0, 0),
-            ToggleToggled = Color3.fromRGB(0, 0, 0),
-            SliderRail = Color3.fromRGB(0, 0, 0),
-            DropdownFrame = Color3.fromRGB(0, 0, 0),
-            DropdownHolder = Color3.fromRGB(0, 0, 0),
-            DropdownBorder = Color3.fromRGB(0, 0, 0),
-            DropdownOption = Color3.fromRGB(0, 0, 0),
-            Keybind = Color3.fromRGB(0, 0, 0),
-            Input = Color3.fromRGB(0, 0, 0),
-            InputFocused = Color3.fromRGB(0, 0, 0),
-            InputIndicator = Color3.fromRGB(0, 0, 0),
-            Dialog = Color3.fromRGB(0, 0, 0),
-            DialogHolder = Color3.fromRGB(0, 0, 0),
-            DialogHolderLine = Color3.fromRGB(0, 0, 0),
-            DialogButton = Color3.fromRGB(0, 0, 0),
-            DialogButtonBorder = Color3.fromRGB(0, 0, 0),
-            DialogBorder = Color3.fromRGB(0, 0, 0),
-            DialogInput = Color3.fromRGB(0, 0, 0),
-            DialogInputLine = Color3.fromRGB(0, 0, 0),
-            Text = Color3.fromRGB(0, 0, 0),
-            SubText = Color3.fromRGB(0, 0, 0),
-            Hover = Color3.fromRGB(0, 0, 0),
-            HoverChange = 0.04
-        }
-    end
-}
-do
     local ab, ac, ad, ae, af, ag, ah, aj, c, e, f, g, h, i, j, k =
         task,
         setmetatable,

@@ -5455,7 +5455,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"misery", "Darker", "Light", "Aqua", "Amethyst", "Rose"}}
+        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose"}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
@@ -5547,7 +5547,7 @@ local aa = {
     [50] = function()
         local aa, ab, ac, ad, ae = b(50)
         return {
-            Name = "misery",
+            Name = "Dark",
             Image = "rbxassetid://84721188886362",
             Accent = Color3.fromRGB(255, 0, 0),
             AcrylicMain = Color3.fromRGB(9, 8, 8),

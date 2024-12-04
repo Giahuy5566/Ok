@@ -82,6 +82,7 @@ local a, b = {
                 "Folder",
                 {"Components"},
                 {
+                    {9, "ModuleScript", {"Button"}},
                     {12, "ModuleScript", {"Notification"}},
                     {13, "ModuleScript", {"Section"}},
                     {17, "ModuleScript", {"Window"}},
@@ -523,7 +524,83 @@ local aa = {
             Update = "rbxassetid://94379369417269"
         }
     end,
-
+    [9] = function()
+        local c, d, e, f, g = b(9)
+        local h = d.Parent.Parent
+        local i, j = e(h.Packages.Flipper), e(h.Creator)
+        local k, l = j.New, i.Spring.new
+        return function(m, n, o)
+            o = o or false
+            local p = {}
+            p.Title =
+                k(
+                "TextLabel",
+                {
+                    FontFace = Font.new "rbxassetid://12187365769",
+                    TextColor3 = Color3.fromRGB(200, 200, 200),
+                    TextSize = 14,
+                    TextWrapped = true,
+                    TextXAlignment = Enum.TextXAlignment.Center,
+                    TextYAlignment = Enum.TextYAlignment.Center,
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    AutomaticSize = Enum.AutomaticSize.Y,
+                    BackgroundTransparency = 1,
+                    Size = UDim2.fromScale(1, 1),
+                    ThemeTag = {TextColor3 = "Text"}
+                }
+            )
+            p.HoverFrame =
+                k(
+                "Frame",
+                {Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, ThemeTag = {BackgroundColor3 = "Hover"}},
+                {k("UICorner", {CornerRadius = UDim.new(0, 4)})}
+            )
+            p.Frame =
+                k(
+                "TextButton",
+                {Size = UDim2.new(0, 0, 0, 32), Parent = n, ThemeTag = {BackgroundColor3 = "DialogButton"}},
+                {
+                    k("UICorner", {CornerRadius = UDim.new(0, 4)}),
+                    k(
+                        "UIStroke",
+                        {
+                            ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                            Transparency = 0.65,
+                            ThemeTag = {Color = "DialogButtonBorder"}
+                        }
+                    ),
+                    p.HoverFrame,
+                    p.Title
+                }
+            )
+            local q, r = j.SpringMotor(1, p.HoverFrame, "BackgroundTransparency", o)
+            j.AddSignal(
+                p.Frame.MouseEnter,
+                function()
+                    r(0.97)
+                end
+            )
+            j.AddSignal(
+                p.Frame.MouseLeave,
+                function()
+                    r(1)
+                end
+            )
+            j.AddSignal(
+                p.Frame.MouseButton1Down,
+                function()
+                    r(1)
+                end
+            )
+            j.AddSignal(
+                p.Frame.MouseButton1Up,
+                function()
+                    r(0.97)
+                end
+            )
+            return p
+        end
+    end,
     [10] = function()
         local c, d, e, f, g = b(10)
         local h, i, j, k =
@@ -673,219 +750,7 @@ local aa = {
         end
         return q
     end,
-    [11] = function()
-        local c, d, e, f, g = b(11)
-        local h = d.Parent.Parent
-        local i, j = e(h.Packages.Flipper), e(h.Creator)
-        local k, l = j.New, i.Spring.new
-        return function(m, n, o, p)
-            local q, ts = {IsLocked = false}, game:GetService "TweenService"
-            q.TitleLabel =
-                k(
-                "TextLabel",
-                {
-                    FontFace = Font.new(
-                        "rbxassetid://12187365769",
-                        Enum.FontWeight.Medium,
-                        Enum.FontStyle.Normal
-                    ),
-                    Text = m,
-                    TextColor3 = Color3.fromRGB(240, 240, 240),
-                    TextSize = 13,
-                    TextXAlignment = Enum.TextXAlignment.Left,
-                    Size = UDim2.new(1, 0, 0, 14),
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                    BackgroundTransparency = 1,
-                    ThemeTag = {TextColor3 = "Text"}
-                }
-            )
-            q.DescLabel =
-                k(
-                "TextLabel",
-                {
-                    FontFace = Font.new "rbxassetid://12187365769",
-                    Text = n,
-                    TextColor3 = Color3.fromRGB(200, 200, 200),
-                    TextSize = 12,
-                    TextWrapped = true,
-                    TextXAlignment = Enum.TextXAlignment.Left,
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                    AutomaticSize = Enum.AutomaticSize.Y,
-                    BackgroundTransparency = 1,
-                    Size = UDim2.new(1, 0, 0, 14),
-                    ThemeTag = {TextColor3 = "SubText"}
-                }
-            )
-            q.LabelHolder =
-                k(
-                "Frame",
-                {
-                    AutomaticSize = Enum.AutomaticSize.Y,
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                    BackgroundTransparency = 1,
-                    Position = UDim2.fromOffset(10, 0),
-                    Size = UDim2.new(1, -28, 0, 0)
-                },
-                {
-                    k(
-                        "UIListLayout",
-                        {SortOrder = Enum.SortOrder.LayoutOrder, VerticalAlignment = Enum.VerticalAlignment.Center}
-                    ),
-                    k("UIPadding", {PaddingBottom = UDim.new(0, 13), PaddingTop = UDim.new(0, 13)}),
-                    q.TitleLabel,
-                    q.DescLabel
-                }
-            )
-            q.Border =
-                k(
-                "UIStroke",
-                {
-                    Transparency = 0.5,
-                    ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-                    Color = Color3.fromRGB(0, 0, 0),
-                    ThemeTag = {Color = "ElementBorder"}
-                }
-            )
-            q.Frame =
-                k(
-                "TextButton",
-                {
-                    Size = UDim2.new(1, 0, 0, 0),
-                    BackgroundTransparency = 0.89,
-                    BackgroundColor3 = Color3.fromRGB(130, 130, 130),
-                    Parent = o,
-                    AutomaticSize = Enum.AutomaticSize.Y,
-                    Text = "",
-                    LayoutOrder = 7,
-                    ThemeTag = {BackgroundColor3 = "Element", BackgroundTransparency = "ElementTransparency"}
-                },
-                {k("UICorner", {CornerRadius = UDim.new(0, 4)}), q.Border, q.LabelHolder}
-            )
-            q.LockButton =
-            k(
-                "TextButton",
-                {
-                    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-                    BackgroundTransparency = 1,
-                    ZIndex = 250,
-                    Size = UDim2.fromScale(1, 1),
-                    Parent = q.Frame,
-                    Visible = false
-                }
-            )
-            q.Locked =
-            k(
-                "Frame",
-                {
-                    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-                    BackgroundTransparency = 1,
-                    ZIndex = 135,
-                    Size = UDim2.fromScale(1, 1),
-                    Parent = q.Frame,
-                    Visible = true
-                },
-                {
-                    k("UICorner",{CornerRadius = UDim.new(0, 4)}),
-                    k(
-                        "ImageLabel",
-                        {
-                            BackgroundTransparency = 1,
-                            Size = UDim2.fromOffset(0, 0),
-                            Position = UDim2.new(0.5, 0, 0.5, 0),
-                            AnchorPoint = Vector2.new(0.5, 0.5),
-                            Image = "http://www.roblox.com/asset/?id=18855086552",
-                            ImageColor3 = Color3.fromRGB(0, 0, 0)
-                        }
-                    )
-                }
-            )
-            function q.SetTitle(r, s)
-                q.TitleLabel.Text = s
-            end
-            function q.SetDesc(r, s)
-                if s == nil then
-                    s = ""
-                end
-                if s == "" then
-                    q.DescLabel.Visible = false
-                else
-                    q.DescLabel.Visible = true
-                end
-                q.DescLabel.Text = s
-                if q.IsLocked then ts:Create(q.Locked.ImageLabel, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1), {Size = UDim2.fromOffset(q.DescLabel.TextBounds.Y + 15, q.DescLabel.TextBounds.Y + 15)}):Play() end
-            end
-            function q.Lock(r)
-                q.Locked.ImageLabel.Size = UDim2.fromOffset(0, 0)
-                ts:Create(
-                    q.Locked,
-                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
-                    {BackgroundTransparency = 0.5}
-                ):Play()
-                ts:Create(
-                    q.Locked.ImageLabel,
-                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
-                    {Size = UDim2.fromOffset(q.DescLabel.TextBounds.Y + 15, q.DescLabel.TextBounds.Y + 15)}
-                ):Play()
-                q.IsLocked = true
-                q.LockButton.Visible = true
-            end
-            function q.UnLock(r)
-                ts:Create(
-                    q.Locked,
-                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
-                    {BackgroundTransparency = 1}
-                ):Play()
-                ts:Create(
-                    q.Locked.ImageLabel,
-                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0.1),
-                    {Size = UDim2.fromOffset(0, 0)}
-                ):Play()
-                q.IsLocked = false
-                q.LockButton.Visible = false
-            end
-            function q.Destroy(r)
-                q.Frame:Destroy()
-            end
-            q:SetTitle(m)
-            q:SetDesc(n)
-            if p then
-                local r, s, t =
-                    h.Themes,
-                    j.SpringMotor(
-                        j.GetThemeProperty "ElementTransparency",
-                        q.Frame,
-                        "BackgroundTransparency",
-                        false,
-                        true
-                    )
-                j.AddSignal(
-                    q.Frame.MouseEnter,
-                    function()
-                        t(j.GetThemeProperty "ElementTransparency" - j.GetThemeProperty "HoverChange")
-                    end
-                )
-                j.AddSignal(
-                    q.Frame.MouseLeave,
-                    function()
-                        t(j.GetThemeProperty "ElementTransparency")
-                    end
-                )
-                j.AddSignal(
-                    q.Frame.MouseButton1Down,
-                    function()
-                        t(j.GetThemeProperty "ElementTransparency" + j.GetThemeProperty "HoverChange")
-                    end
-                )
-                j.AddSignal(
-                    q.Frame.MouseButton1Up,
-                    function()
-                        t(j.GetThemeProperty "ElementTransparency" - j.GetThemeProperty "HoverChange")
-                    end
-                )
-            end
-            return q
-        end
-    end,
+
     [12] = function()
         local c, d, e, f, g = b(12)
         local h = d.Parent.Parent

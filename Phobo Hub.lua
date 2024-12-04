@@ -82,7 +82,6 @@ local a, b = {
                 "Folder",
                 {"Components"},
                 {
-                    {9, "ModuleScript", {"Button"}},
                     {12, "ModuleScript", {"Notification"}},
                     {13, "ModuleScript", {"Section"}},
                     {17, "ModuleScript", {"Window"}},
@@ -524,83 +523,7 @@ local aa = {
             Update = "rbxassetid://94379369417269"
         }
     end,
-    [9] = function()
-        local c, d, e, f, g = b(9)
-        local h = d.Parent.Parent
-        local i, j = e(h.Packages.Flipper), e(h.Creator)
-        local k, l = j.New, i.Spring.new
-        return function(m, n, o)
-            o = o or false
-            local p = {}
-            p.Title =
-                k(
-                "TextLabel",
-                {
-                    FontFace = Font.new "rbxassetid://12187365769",
-                    TextColor3 = Color3.fromRGB(200, 200, 200),
-                    TextSize = 14,
-                    TextWrapped = true,
-                    TextXAlignment = Enum.TextXAlignment.Center,
-                    TextYAlignment = Enum.TextYAlignment.Center,
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                    AutomaticSize = Enum.AutomaticSize.Y,
-                    BackgroundTransparency = 1,
-                    Size = UDim2.fromScale(1, 1),
-                    ThemeTag = {TextColor3 = "Text"}
-                }
-            )
-            p.HoverFrame =
-                k(
-                "Frame",
-                {Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, ThemeTag = {BackgroundColor3 = "Hover"}},
-                {k("UICorner", {CornerRadius = UDim.new(0, 4)})}
-            )
-            p.Frame =
-                k(
-                "TextButton",
-                {Size = UDim2.new(0, 0, 0, 32), Parent = n, ThemeTag = {BackgroundColor3 = "DialogButton"}},
-                {
-                    k("UICorner", {CornerRadius = UDim.new(0, 4)}),
-                    k(
-                        "UIStroke",
-                        {
-                            ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-                            Transparency = 0.65,
-                            ThemeTag = {Color = "DialogButtonBorder"}
-                        }
-                    ),
-                    p.HoverFrame,
-                    p.Title
-                }
-            )
-            local q, r = j.SpringMotor(1, p.HoverFrame, "BackgroundTransparency", o)
-            j.AddSignal(
-                p.Frame.MouseEnter,
-                function()
-                    r(0.97)
-                end
-            )
-            j.AddSignal(
-                p.Frame.MouseLeave,
-                function()
-                    r(1)
-                end
-            )
-            j.AddSignal(
-                p.Frame.MouseButton1Down,
-                function()
-                    r(1)
-                end
-            )
-            j.AddSignal(
-                p.Frame.MouseButton1Up,
-                function()
-                    r(0.97)
-                end
-            )
-            return p
-        end
-    end,
+
     [10] = function()
         local c, d, e, f, g = b(10)
         local h, i, j, k =

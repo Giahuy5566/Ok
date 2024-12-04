@@ -1808,9 +1808,9 @@ local aa = {
             o.Frame,
             function()
                 p.Window:Dialog {
-                    Title = n.UpdateDate or "00/00/0000 [V Title]",
-                    Content = n.UpdateLog or "● Content",
-                    Buttons = {{Title = "Close"}}
+                    Title = n.UpdateDate or "misery",
+                    Content = n.UpdateLog or "by Gia Huy",
+                    Buttons = {{Title = "exit"}}
                 }
             end
             )

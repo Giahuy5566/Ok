@@ -2213,73 +2213,7 @@ local aa = {
             return v
         end
     end,
-    [18] = function()
-        local c, d, e, f, g = b(18)
-        local h = d.Parent
-        local i, j, k =
-            e(h.Themes),
-            e(h.Packages.Flipper),
-            {
-                Registry = {},
-                Signals = {},
-                TransparencyMotors = {},
-                DefaultProperties = {
-                    ScreenGui = {ResetOnSpawn = false, ZIndexBehavior = Enum.ZIndexBehavior.Sibling},
-                    Frame = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        BorderSizePixel = 0
-                    },
-                    ScrollingFrame = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        ScrollBarImageColor3 = Color3.new(0, 0, 0)
-                    },
-                    TextLabel = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
-                        Text = "",
-                        TextColor3 = Color3.new(0, 0, 0),
-                        BackgroundTransparency = 1,
-                        TextSize = 14
-                    },
-                    TextButton = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        AutoButtonColor = false,
-                        Font = Enum.Font.SourceSans,
-                        Text = "",
-                        TextColor3 = Color3.new(0, 0, 0),
-                        TextSize = 14
-                    },
-                    TextBox = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        ClearTextOnFocus = false,
-                        Font = Enum.Font.SourceSans,
-                        Text = "",
-                        TextColor3 = Color3.new(0, 0, 0),
-                        TextSize = 14
-                    },
-                    ImageLabel = {
-                        BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        BorderSizePixel = 0
-                    },
-                    ImageButton = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        AutoButtonColor = false
-                    },
-                    CanvasGroup = {
-                        BackgroundColor3 = Color3.new(1, 1, 1),
-                        BorderColor3 = Color3.new(0, 0, 0),
-                        BorderSizePixel = 0
-                    }
-                }
-            }
+
         local l = function(l, m)
             if m.ThemeTag then
                 k.AddThemeObject(l, m.ThemeTag)
@@ -2388,7 +2322,7 @@ local aa = {
                 j(
                 "ImageLabel",
                 {
-                    Image = "rbxassetid://10709791437",
+                    Image = "rbxassetid://11127408662",
                     Size = UDim2.fromOffset(16, 16),
                     AnchorPoint = Vector2.new(1, 0.5),
                     Position = UDim2.new(1, -10, 0.5, 0),

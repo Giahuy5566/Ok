@@ -2557,7 +2557,7 @@ end)
 			NewList.BackgroundTransparency = 1
 			NewList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			NewList.BorderSizePixel = 0
-			NewList.Size = UDim2.new(1, 0, 0, 50)
+			NewList.Size = UDim2.new(1, 0, 0, 31)
 			NewList.Parent = Dropdown.Section.Elements.SectionContent
 
 			local ToggleFrame = Instance.new("TextButton")

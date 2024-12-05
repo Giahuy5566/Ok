@@ -1818,7 +1818,7 @@ end)
 			ToggleFrame.Name = "ToggleFrame"
 			ToggleFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			ToggleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			ToggleFrame.Size = UDim2.new(0, 15, 0, 15)
+			ToggleFrame.Size = UDim2.new(0, 12, 0, 12)
 
 			local DisabledGradient = Instance.new("UIGradient")
 			DisabledGradient.Name = "DisabledGradient"

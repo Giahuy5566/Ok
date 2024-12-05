@@ -2554,7 +2554,7 @@ end)
 			local NewList = Instance.new("Frame")
 			NewList.Name = "NewList"
 			NewList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			NewList.BackgroundTransparency = 10
+			NewList.BackgroundTransparency = 1
 			NewList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			NewList.BorderSizePixel = 0
 			NewList.Size = UDim2.new(1, 0, 0, 31)
@@ -2654,7 +2654,7 @@ end)
 			Title.BackgroundTransparency = 1
 			Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Title.BorderSizePixel = 0
-			Title.Size = UDim2.new(1, 0, 0, 8)
+			Title.Size = UDim2.new(5, 0, 0, 15)
 			Title.Parent = NewList
 
 			-- // Connections

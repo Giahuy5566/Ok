@@ -2654,16 +2654,16 @@ end)
 			Title.BackgroundTransparency = 1
 			Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Title.BorderSizePixel = 0
-			Title.Size = UDim2.new(5, 0, 0, 15)
+			Title.Size = UDim2.new(1, 0, 0, 8)
 			Title.Parent = NewList
 
 			-- // Connections
 			Library:Connection(ToggleFrame.MouseButton1Down, function()
 				ContentOutline.Visible = not ContentOutline.Visible
 				if ContentOutline.Visible then
-					NewList.ZIndex = 5
+					NewList.ZIndex = 15
 				else
-					NewList.ZIndex = 1
+					NewList.ZIndex = 5
 				end
 			end)
 			Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)

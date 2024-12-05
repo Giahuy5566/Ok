@@ -87,7 +87,7 @@ local Library = {
 			[Enum.UserInputType.MouseButton3] = "mouse3"
 		};
 		Connections = {};
-		UIKey = Enum.KeyCode.End;
+		UIKey = Enum.KeyCode.P;
 		ScreenGUI = nil;
 		FSize = 12;
 		SettingsPage = nil;

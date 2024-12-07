@@ -184,7 +184,7 @@ function library.new(library_title, cfg_location)
         BorderColor3 = Color3.fromRGB(78, 93, 234),
         Position = UDim2.new(0.5, 0, 0.5, 0),
         Size = UDim2.new(0, 530, 0, 350),
-        Image = "http://www.roblox.com/asset/?id=7300333488",
+        Image = "http://www.roblox.com/asset/?id=126575317881341",
         AutoButtonColor = false,
         Modal = true,
     }, ScreenGui)

@@ -163,7 +163,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	BindButton.Position = UDim2.new(0.847561002, 0, 0, 0)
 	BindButton.Size = UDim2.new(0, 100, 0, 27)
 	BindButton.Font = Enum.Font.GothamSemibold
-	BindButton.Text = "[RightControl]"
+	BindButton.Text = "V1"
 	BindButton.TextColor3 = Color3.fromRGB(147,112,219)
 	BindButton.TextSize = 13.000
 
@@ -217,7 +217,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	MainPage.ClipsDescendants = true
 	MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	MainPage.BackgroundTransparency = 1.000
-	MainPage.Size = UDim2.new(0, 490, 0, 305)
+	MainPage.Size = UDim2.new(0, 450, 0, 400)
 
 	local PageList = Instance.new("Folder")
 	PageList.Name = "PageList"
@@ -356,7 +356,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			
 			TextBtn.Name = "TextBtn"
 			TextBtn.Parent = Button
-			TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+			TextBtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 			TextBtn.Position = UDim2.new(0, 1, 0, 1)
 			TextBtn.Size = UDim2.new(0, 468, 0, 29)
 			TextBtn.AutoButtonColor = false

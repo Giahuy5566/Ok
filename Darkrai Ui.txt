@@ -105,7 +105,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	
-	Main:TweenSize(UDim2.new(0, 550, 0, 465),"Out","Quad",0.4,true)
+	Main:TweenSize(UDim2.new(0, 500, 0, 500),"Out","Quad",0.4,true)
 
 	local MCNR = Instance.new("UICorner")
 	MCNR.Name = "MCNR"
